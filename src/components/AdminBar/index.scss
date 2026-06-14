@@ -1,7 +1,7 @@
-@import '~@payloadcms/ui/scss';
-
 .admin-bar {
-  @include small-break {
+  // Payload's `small-break` mixin (~768px). Inlined to avoid importing
+  // `~@payloadcms/ui/scss`, which fails to resolve under Next's Turbopack build.
+  @media (max-width: 768px) {
     display: none;
   }
 }

@@ -22,9 +22,7 @@ const nextConfig = {
       ),
     ],
   },
-  experimental: {
-    reactCompiler: true,
-  },
+  reactCompiler: true,
   reactStrictMode: true,
   redirects,
 }

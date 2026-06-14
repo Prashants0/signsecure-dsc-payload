@@ -1,5 +1,4 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import {} from '@/components/ui/tooltip'
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import FAQSection, { FAQ } from '@/components/faq'
 import { Metadata } from 'next'

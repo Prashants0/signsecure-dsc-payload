@@ -17,7 +17,7 @@ export const revalidateBlog: CollectionAfterChangeHook<Blog> = ({
       payload.logger.info(`Revalidating blog at path: ${path}`)
       revalidatePath(path)
       revalidatePath('/blogs')
-      revalidateTag('blogs-sitemap')
+      revalidateTag('blogs-sitemap', 'max')
       revalidateCloudFront([path, '/blogs'])
     }
 
@@ -28,7 +28,7 @@ export const revalidateBlog: CollectionAfterChangeHook<Blog> = ({
       payload.logger.info(`Revalidating old blog at path: ${oldPath}`)
       revalidatePath(oldPath)
       revalidatePath('/blogs')
-      revalidateTag('blogs-sitemap')
+      revalidateTag('blogs-sitemap', 'max')
       revalidateCloudFront([oldPath, '/blogs'])
     }
   }
@@ -40,7 +40,7 @@ export const revalidateDelete: CollectionAfterDeleteHook<Blog> = ({ doc, req: { 
     const path = `/blogs/${doc?.slug}`
 
     revalidatePath(path)
-    revalidateTag('blogs-sitemap')
+    revalidateTag('blogs-sitemap', 'max')
     revalidateCloudFront([path, '/blogs'])
   }
 

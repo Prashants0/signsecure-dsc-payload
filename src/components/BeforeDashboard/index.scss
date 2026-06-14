@@ -1,7 +1,7 @@
-@import '~@payloadcms/ui/scss';
-
+// Payload's base() unit is 20px; values inlined to avoid importing
+// `~@payloadcms/ui/scss`, which fails to resolve under Next's Turbopack build.
 .dashboard .before-dashboard {
-  margin-bottom: base(1.5);
+  margin-bottom: 1.875rem; // base(1.5)
 
   &__banner {
     & h4 {
@@ -11,7 +11,7 @@
 
   &__instructions {
     list-style: decimal;
-    margin-bottom: base(0.5);
+    margin-bottom: 0.625rem; // base(0.5)
 
     & li {
       width: 100%;

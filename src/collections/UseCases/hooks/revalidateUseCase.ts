@@ -17,7 +17,7 @@ export const revalidateUseCase: CollectionAfterChangeHook<UseCase> = async ({
       payload.logger.info(`Revalidating use case at path: ${path}`)
 
       revalidatePath(path)
-      revalidateTag('use-cases-sitemap')
+      revalidateTag('use-cases-sitemap', 'max')
       revalidateCloudFront([path, '/use-cases', '/use-cases/*'])
 
       // Also revalidate CloudFront cache if available
@@ -38,7 +38,7 @@ export const revalidateUseCase: CollectionAfterChangeHook<UseCase> = async ({
       payload.logger.info(`Revalidating old use case at path: ${oldPath}`)
 
       revalidatePath(oldPath)
-      revalidateTag('use-cases-sitemap')
+      revalidateTag('use-cases-sitemap', 'max')
       revalidateCloudFront([oldPath, '/use-cases', '/use-cases/*'])
 
       // Also revalidate CloudFront cache if available
@@ -63,7 +63,7 @@ export const revalidateDelete: CollectionAfterDeleteHook<UseCase> = async ({
     const path = `/use-cases/${doc?.slug}`
 
     revalidatePath(path)
-    revalidateTag('use-cases-sitemap')
+    revalidateTag('use-cases-sitemap', 'max')
     revalidateCloudFront([path, '/use-cases', '/use-cases/*'])
 
     // Also revalidate CloudFront cache if available
