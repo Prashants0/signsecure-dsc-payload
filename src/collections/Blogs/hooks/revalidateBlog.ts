@@ -1,0 +1,48 @@
+import type { CollectionAfterChangeHook, CollectionAfterDeleteHook } from 'payload'
+
+import { revalidatePath, revalidateTag } from 'next/cache'
+
+import type { Blog } from '../../../payload-types'
+import { revalidateCloudFront } from '@/lib/utils'
+
+export const revalidateBlog: CollectionAfterChangeHook<Blog> = ({
+  doc,
+  previousDoc,
+  req: { payload, context },
+}) => {
+  if (!context.disableRevalidate) {
+    if (doc._status === 'published') {
+      const path = `/blogs/${doc.slug}`
+
+      payload.logger.info(`Revalidating blog at path: ${path}`)
+      revalidatePath(path)
+      revalidatePath('/blogs')
+      revalidateTag('blogs-sitemap')
+      revalidateCloudFront([path, '/blogs'])
+    }
+
+    // If the blog was previously published, we need to revalidate the old path
+    if (previousDoc._status === 'published' && doc._status !== 'published') {
+      const oldPath = `/blogs/${previousDoc.slug}`
+
+      payload.logger.info(`Revalidating old blog at path: ${oldPath}`)
+      revalidatePath(oldPath)
+      revalidatePath('/blogs')
+      revalidateTag('blogs-sitemap')
+      revalidateCloudFront([oldPath, '/blogs'])
+    }
+  }
+  return doc
+}
+
+export const revalidateDelete: CollectionAfterDeleteHook<Blog> = ({ doc, req: { context } }) => {
+  if (!context.disableRevalidate) {
+    const path = `/blogs/${doc?.slug}`
+
+    revalidatePath(path)
+    revalidateTag('blogs-sitemap')
+    revalidateCloudFront([path, '/blogs'])
+  }
+
+  return doc
+}

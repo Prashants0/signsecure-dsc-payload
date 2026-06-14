@@ -1,0 +1,54 @@
+<svg width="500" height="400" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background shapes -->
+  <rect x="0" y="0" width="500" height="400" fill="white"/>
+  <circle cx="250" cy="200" r="180" fill="#E6F0FF" opacity="0.5"/>
+  <circle cx="250" cy="200" r="120" fill="#CCE0FF" opacity="0.3"/>
+  
+  <!-- Shield outline -->
+  <path d="M250 50 L350 100 L350 200 C350 250 300 300 250 330 C200 300 150 250 150 200 L150 100 L250 50Z" fill="#F0F7FF" stroke="#0066CC" stroke-width="3"/>
+  
+  <!-- Lock in the center -->
+  <rect x="220" y="170" width="60" height="70" rx="10" fill="#0066CC"/>
+  <rect x="235" y="120" width="30" height="50" rx="15" fill="#0066CC"/>
+  <circle cx="250" cy="200" r="10" fill="white"/>
+  <line x1="250" y1="200" x2="250" y2="220" stroke="white" stroke-width="3"/>
+  
+  <!-- Digital elements -->
+  <circle cx="180" cy="150" r="15" fill="#0066CC" opacity="0.7"/>
+  <circle cx="320" cy="150" r="15" fill="#0066CC" opacity="0.7"/>
+  <circle cx="200" cy="250" r="15" fill="#0066CC" opacity="0.7"/>
+  <circle cx="300" cy="250" r="15" fill="#0066CC" opacity="0.7"/>
+  
+  <!-- Connection lines -->
+  <line x1="180" y1="150" x2="320" y2="150" stroke="#0066CC" stroke-width="2" opacity="0.4"/>
+  <line x1="180" y1="150" x2="200" y2="250" stroke="#0066CC" stroke-width="2" opacity="0.4"/>
+  <line x1="320" y1="150" x2="300" y2="250" stroke="#0066CC" stroke-width="2" opacity="0.4"/>
+  <line x1="200" y1="250" x2="300" y2="250" stroke="#0066CC" stroke-width="2" opacity="0.4"/>
+  <line x1="200" y1="250" x2="320" y2="150" stroke="#0066CC" stroke-width="2" opacity="0.4"/>
+  <line x1="300" y1="250" x2="180" y2="150" stroke="#0066CC" stroke-width="2" opacity="0.4"/>
+  
+  <!-- Binary code representation -->
+  <text x="150" y="80" font-family="monospace" font-size="10" fill="#0066CC">10110101</text>
+  <text x="170" y="100" font-family="monospace" font-size="10" fill="#0066CC">01001010</text>
+  <text x="310" y="80" font-family="monospace" font-size="10" fill="#0066CC">11010010</text>
+  <text x="330" y="100" font-family="monospace" font-size="10" fill="#0066CC">10101100</text>
+  
+  <!-- Document with signature -->
+  <rect x="70" y="200" width="70" height="90" rx="5" fill="white" stroke="#0066CC" stroke-width="2"/>
+  <line x1="80" y1="220" x2="130" y2="220" stroke="#0066CC" stroke-width="1"/>
+  <line x1="80" y1="230" x2="130" y2="230" stroke="#0066CC" stroke-width="1"/>
+  <line x1="80" y1="240" x2="110" y2="240" stroke="#0066CC" stroke-width="1"/>
+  <path d="M85 270 C90 260, 95 280, 100 270 C105 260, 110 280, 115 270 C120 260, 125 275, 130 265" stroke="#0066CC" stroke-width="1.5" fill="none"/>
+  
+  <!-- Document with digital signature -->
+  <rect x="360" y="200" width="70" height="90" rx="5" fill="white" stroke="#0066CC" stroke-width="2"/>
+  <line x1="370" y1="220" x2="420" y2="220" stroke="#0066CC" stroke-width="1"/>
+  <line x1="370" y1="230" x2="420" y2="230" stroke="#0066CC" stroke-width="1"/>
+  <line x1="370" y1="240" x2="400" y2="240" stroke="#0066CC" stroke-width="1"/>
+  <rect x="370" y="260" width="50" height="20" rx="3" fill="#F0F7FF" stroke="#0066CC" stroke-width="1" stroke-dasharray="2 2"/>
+  <text x="375" y="275" font-family="sans-serif" font-size="10" fill="#0066CC">DSC</text>
+  
+  <!-- Arrow connecting documents -->
+  <path d="M160 240 L310 240" stroke="#0066CC" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M305 235 L310 240 L305 245" fill="none" stroke="#0066CC" stroke-width="2"/>
+</svg> 

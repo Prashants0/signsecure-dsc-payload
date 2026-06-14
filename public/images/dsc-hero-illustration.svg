@@ -1,0 +1,45 @@
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background elements -->
+  <circle cx="250" cy="250" r="200" fill="#E6F0FF" opacity="0.5"/>
+  <circle cx="250" cy="250" r="150" fill="#CCE0FF" opacity="0.3"/>
+  
+  <!-- Document -->
+  <rect x="120" y="100" width="260" height="340" rx="10" fill="white" stroke="#0066CC" stroke-width="3"/>
+  
+  <!-- Document lines -->
+  <line x1="150" y1="150" x2="350" y2="150" stroke="#E6E6E6" stroke-width="2"/>
+  <line x1="150" y1="180" x2="350" y2="180" stroke="#E6E6E6" stroke-width="2"/>
+  <line x1="150" y1="210" x2="350" y2="210" stroke="#E6E6E6" stroke-width="2"/>
+  <line x1="150" y1="240" x2="250" y2="240" stroke="#E6E6E6" stroke-width="2"/>
+  
+  <!-- Digital signature area -->
+  <rect x="150" y="280" width="200" height="80" rx="5" fill="#F0F7FF" stroke="#0066CC" stroke-width="2" stroke-dasharray="4 4"/>
+  
+  <!-- Signature -->
+  <path d="M170 320 C180 300, 190 340, 200 320 C210 300, 220 330, 230 320 C240 310, 250 330, 260 315 C270 300, 280 330, 290 320 C300 310, 310 330, 320 310" stroke="#0066CC" stroke-width="3" fill="none"/>
+  
+  <!-- Lock icon -->
+  <circle cx="330" cy="320" r="20" fill="#0066CC" opacity="0.1"/>
+  <rect x="320" y="315" width="20" height="15" rx="2" fill="#0066CC"/>
+  <rect x="325" y="305" width="10" height="15" rx="2" fill="#0066CC"/>
+  
+  <!-- Certificate seal -->
+  <circle cx="200" cy="390" r="25" fill="#FFCC00" opacity="0.8"/>
+  <circle cx="200" cy="390" r="20" fill="#FFCC00"/>
+  <path d="M190 380 L200 375 L210 380 L215 390 L200 405 L185 390 L190 380" fill="#FFFFFF"/>
+  
+  <!-- Security elements -->
+  <circle cx="400" cy="150" r="30" fill="#0066CC" opacity="0.1"/>
+  <path d="M400 130 L400 170 M380 150 L420 150" stroke="#0066CC" stroke-width="3"/>
+  
+  <circle cx="100" cy="350" r="30" fill="#0066CC" opacity="0.1"/>
+  <path d="M100 330 L115 370 M85 370 L100 330" stroke="#0066CC" stroke-width="3"/>
+  
+  <!-- Abstract security net -->
+  <circle cx="320" cy="150" r="10" fill="#0066CC" opacity="0.6"/>
+  <circle cx="370" cy="200" r="6" fill="#0066CC" opacity="0.6"/>
+  <circle cx="350" cy="250" r="8" fill="#0066CC" opacity="0.6"/>
+  <line x1="320" y1="150" x2="370" y2="200" stroke="#0066CC" stroke-width="1" opacity="0.4"/>
+  <line x1="370" y1="200" x2="350" y2="250" stroke="#0066CC" stroke-width="1" opacity="0.4"/>
+  <line x1="350" y1="250" x2="320" y2="150" stroke="#0066CC" stroke-width="1" opacity="0.4"/>
+</svg> 

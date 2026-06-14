@@ -1,0 +1,23 @@
+build
+dist / media
+node_modules
+.DS_Store
+.env
+.next
+.vercel
+
+# Payload default media upload directory
+public/media/
+
+public/robots.txt
+public/sitemap*.xml
+
+# sst
+.sst
+
+# open-next
+.open-next
+
+# generated / logs
+tsconfig.tsbuildinfo
+*.log
